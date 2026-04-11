@@ -1,0 +1,56 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+
+@theme {
+    --font-sans: Inter, "Noto Sans JP", sans-serif;
+    --color-primary: oklch(56.81% 0.1707 252.71);
+    --color-primary-light: oklch(71.65% 0.158 245.34);
+    --color-primary-dark: oklch(46.06% 0.1572 256);
+    --color-primary-content: oklch(97.71% 0.012485946526696063 236.61974498403976);
+
+    --color-secondary: oklch(85.55% 0.1748 88.01);
+    --color-secondary-light: oklch(92.28% 0.1936 102.53);
+    --color-secondary-dark: oklch(72.39% 0.1479 88.24);
+    --color-secondary-content: oklch(94.88% 0.07737535081629626 93.92931480784615);
+
+    --color-info: var(--color-blue-600);
+    --color-info-light: var(--color-blue-400);
+    --color-info-dark: var(--color-blue-700);
+    --color-info-content: var(--color-blue-50);
+
+    --color-success: oklch(61.76% 0.1355 156.74);
+    --color-success-light: var(--color-green-400);
+    --color-success-dark: oklch(51.37% 0.1142 156.47);
+    --color-success-content: oklch(95.65% 0.0198 159.75);
+
+    --color-error: oklch(59.22% 0.243 29.23);
+    --color-error-light: var(--color-red-400);
+    --color-error-dark: oklch(53.47% 0.2193 29.23);
+    --color-error-content: oklch(96.09% 0.0163 17.44);
+
+    --color-warning: var(--color-yellow-600);
+    --color-warning-light: var(--color-yellow-400);
+    --color-warning-dark: var(--color-yellow-700);
+    --color-warning-content: var(--color-yellow-50);
+
+    --color-neutral: oklch(51.03% 0 0);
+    --color-neutral-light: oklch(68.3% 0 0);
+    --color-neutral-dark: oklch(42.02% 0 0);
+    --color-neutral-content: oklch(84.52% 0 0);
+}
+
+@layer components{
+    .heading-1 {
+        @apply relative right-1/2 left-1/2 -mx-[50vw] w-screen bg-linear-to-r/oklch from-info via-primary to-info text-center py-15
+    }
+    .heading-2 {
+        @apply relative rounded border-2 border-primary p-4 before:absolute before:top-full before:left-20 before:-translate-x-1/2 before:border-x-18 before:border-t-18 before:border-x-transparent before:border-t-primary after:absolute after:top-full after:left-20 after:-translate-x-1/2 after:border-x-15 after:border-t-15 after:border-x-transparent after:border-t-white
+    }
+    .marker {
+        @apply bg-transparent bg-linear-to-b from-transparent from-65% to-warning-light to-65% font-bold
+    }
+    .link {
+        @apply font-bold text-primary
+    }
+}
