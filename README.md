@@ -4,20 +4,25 @@ srcファイル以下をすべてダウンロードしてください
 - src/input.css
 
 基本的には使いません
-43 - 56 に新たに定義した class があります。class 名からどのコンポーネントに対応しているか察してください（）
+43 - 56 に新たに定義した class が入ってます。class 名からどのコンポーネントに対応しているか察してください（）
 今回使われていなかった TailWind CSS の class を使いたくなったら
 
 ```
-npm install tailwindcss @tailwindcss/cli
 npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
 ```
 
-をターミナルで実行してください（環境構築済みの場合）
+をターミナルで実行してください。うまくいかないときは
+
+```
+npm install tailwindcss @tailwindcss/cli
+```
+
+を実行してみてください
 
 - src/output.css
 
 基本的には使いません
-TailWind CSS の class があります
+TailWind CSS の class が入ってます
 
 - src/section.html
 
