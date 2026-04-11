@@ -46,13 +46,65 @@ brew install --cask visual-studio-code
 
 ---
 
-## 3. Dev Containers 拡張機能のインストール
+## 3. `code` コマンドのインストール
+
+VS Code を起動したら、「表示」→「コマンド パレット」を選択し、  
+`Shell Command: Install 'code' command in PATH` を実行してください。
+
+コマンドパレットは、`Ctrl + Shift + P`（macOS では `Cmd + Shift + P`）でも開けます。  
+ウィンドウ上部の検索バーをクリックして `>` を入力して開く方法でも OK です。
+
+これで、ターミナルから `code` コマンド（VS Code を起動するコマンド）が使えるようになります。
+
+---
+
+## 4. Git のインストール
+
+[公式サイト](https://git-scm.com/book/ja/v2/%E4%BD%BF%E3%81%84%E5%A7%8B%E3%82%81%E3%82%8B-Git%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)を参考に Git をインストールしてください。
+
+macOS の場合、Homebrew でもインストールできます。
+
+```bash
+brew install git
+```
+
+次のコマンドでバージョンが表示されれば、インストールは完了です。
+
+```bash
+git --version
+```
+
+---
+
+## 5. リポジトリのクローン
+
+次のコマンドで、このリポジトリをクローンしてください。
+
+```bash
+git clone https://github.com/fairwind-scripts/shinkan2026-trial.git
+```
+
+クローンしたら、次のコマンドでディレクトリを移動してください。
+
+```bash
+cd shinkan2026-trial
+```
+
+次のコマンドで VS Code でこのリポジトリを開いてください。
+
+```bash
+code .
+```
+
+---
+
+## 6. Dev Containers 拡張機能のインストール
 
 VS Code でこのリポジトリを開いたら、拡張機能パネルを開き、`Dev Containers` をインストールしてください。
 
 ---
 
-## 4. Dev Container で開く
+## 7. Dev Container で開く
 
 ウィンドウ左下の `><` のようなアイコンをクリックし、「コンテナーで再度開く」を選択してください。
 
@@ -61,12 +113,12 @@ VS Code でこのリポジトリを開いたら、拡張機能パネルを開き
 
 ---
 
-## 5. 開発の開始
+## 8. 開発の開始
 
 このリポジトリは、`HTML + Tailwind CSS` でページを作る構成です。  
 編集時は、以下の 2 つを使います。
 
-### 5-1. Tailwind CSS の監視ビルド
+### 8-1. Tailwind CSS の監視ビルド
 
 ターミナルで次を実行してください。
 
@@ -76,7 +128,7 @@ pnpm dev
 
 これで `src/input.css` の変更が `src/output.css` に反映され続けます。
 
-### 5-2. HTML のプレビュー
+### 8-2. HTML のプレビュー
 
 1. `src/section.html` を開く
 2. 右上の虫眼鏡付きのアイコンをクリックする
@@ -91,7 +143,7 @@ http://127.0.0.1:3000/src/section.html?vscode-livepreview=true
 
 ---
 
-## 6. よくある詰まりポイント
+## 9. よくある詰まりポイント
 
 - `docker --version` が通らない: Docker Desktop の起動とターミナル再起動を試す
 - `pnpm` が使えない: コンテナー内で開けているか確認する（右下のステータスに `Dev Container` 表示があるか）
