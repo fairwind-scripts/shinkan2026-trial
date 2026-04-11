@@ -4,26 +4,47 @@
 	"name": "Node.js",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/javascript-node:4-24-trixie",
-
 	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
-
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "24",
+			"pnpmVersion": "latest"
+		}
+	},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
-
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "npm install tailwindcss @tailwindcss/cli",
-
+	"postCreateCommand": "pnpm install",
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"ms-vscode.live-server", // Live Preview
-				"bradlc.vscode-tailwindcss" // Tailwind CSS IntelliSense 
+				"bradlc.vscode-tailwindcss" // Tailwind CSS IntelliSense
 			]
+		},
+		"settings": {
+			"editor.formatOnSave": true,
+			"editor.formatOnPaste": true,
+			"editor.tabSize": 4,
+			"[html]": {
+				"editor.defaultFormatter": "vscode.html-language-features"
+			},
+			"editor.guides.indentation": true,
+			"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+			"editor.roundedSelection": true,
+			"files.insertFinalNewline": true,
+			"files.trimFinalNewlines": true,
+			"files.trimTrailingWhitespace": true,
+			"emmet.variables": {
+				"lang": "ja",
+				"charset": "utf-8",
+				"doctype": "html"
+			}
+			// "livePreview.defaultPreviewPath": "/src/section.html",
+			// "livePreview.showServerHttpErrorNotices": false
 		}
 	}
-
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }
