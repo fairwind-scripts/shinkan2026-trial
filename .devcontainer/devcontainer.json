@@ -7,14 +7,13 @@
   // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
-      "version": "24",
-      "pnpmVersion": "latest"
+      "version": "24"
     }
   },
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "pnpm install",
+  "postCreateCommand": "npm install",
   // Configure tool-specific properties.
   "customizations": {
     "vscode": {
