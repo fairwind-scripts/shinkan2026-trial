@@ -1,7 +1,5 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-
-
 @theme {
     --font-sans: Inter, "Noto Sans JP", sans-serif;
     --color-primary: oklch(56.81% 0.1707 252.71);
